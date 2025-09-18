@@ -32,7 +32,7 @@ jobs:
         run: |
           python -m playwright install --with-deps
 
-      # Step 7: Deploy Allure Report to GitHub Pages
-      - name: Deploy Allure Report
+      # Step 5: Run pytest with Allure (if configured)
+      - name: Run Playwright tests
         run: |
-          allure open allure-report
+           python -m pytest tests/
