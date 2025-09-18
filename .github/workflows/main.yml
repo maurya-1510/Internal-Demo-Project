@@ -15,7 +15,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Step 2: Setup Python
+      # Step 2: Set up Python
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
@@ -46,3 +46,5 @@ jobs:
       - name: Run Playwright tests
         run: |
           python -m pytest tests/
+          allure generate allure-results --clean -o allure-report
+          allure open allure-report
