@@ -15,11 +15,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Step 2: Setup Python
+      # Step 2: Set up Python
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
+          cache: 'pip'   # ✅ cache pip dependencies
 
       # Step 3: Install dependencies
       - name: Install dependencies
@@ -27,12 +28,21 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # Step 4: Install Playwright browsers
+      # Step 4: Cache Playwright browsers
+      - name: Cache Playwright Browsers
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright
+          restore-keys: |
+            ${{ runner.os }}-playwright
+
+      # Step 5: Install Playwright Browsers (only if not cached)
       - name: Install Playwright Browsers
         run: |
           python -m playwright install --with-deps
 
-      # Step 5: Run pytest with Allure (if configured)
+      # Step 6: Run pytest with Allure (parallelized)
       - name: Run Playwright tests
         run: |
           python -m pytest tests/
