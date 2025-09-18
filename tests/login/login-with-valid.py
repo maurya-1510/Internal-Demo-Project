@@ -25,6 +25,9 @@ def test_login_user(page: Page):
 
     page.wait_for_timeout(5000)
 
+    with allure.step("Verify logged in username is displayed"):
+     expect(page.get_by_text("maurya.p@biztechcs.com")).to_be_visible()
+
     with allure.step("Take final screenshot and attach URL"):
         screenshot = page.screenshot(full_page=True)
         allure.attach(screenshot, name="Final State - Full Page", attachment_type=allure.attachment_type.PNG)
