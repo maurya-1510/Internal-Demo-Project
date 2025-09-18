@@ -1,4 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","22734","Register Demo Test","tests.register","Wed Aug 20 16:33:09 IST 2025","passed","Wed Aug 20 16:33:32 IST 2025","","register-new","",""
-"","25576","Login Test with valid Credentials","tests.login","Thu Sep 18 12:52:06 IST 2025","passed","Thu Sep 18 12:52:32 IST 2025","","login-with-valid","",""
-"","22607","Login Test with Invalid Credentials","tests.login","Wed Aug 20 16:32:25 IST 2025","passed","Wed Aug 20 16:32:47 IST 2025","","login-with-invalid","",""

@@ -1,1 +1,1 @@
-[{"uid":"295e4d496d3beedd","name":"Register Demo Test","time":{"start":1755687789658,"stop":1755687812392,"duration":22734},"status":"passed","severity":"normal"},{"uid":"c11522fc98f68d58","name":"Login Test with valid Credentials","time":{"start":1758180126676,"stop":1758180152252,"duration":25576},"status":"passed","severity":"normal"},{"uid":"2a0b279392eba914","name":"Login Test with Invalid Credentials","time":{"start":1755687745212,"stop":1755687767819,"duration":22607},"status":"passed","severity":"normal"}]
+[]
