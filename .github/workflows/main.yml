@@ -35,4 +35,4 @@ jobs:
       # Step 5: Run pytest with Allure (if configured)
       - name: Run Playwright tests
         run: |
-          pytest --alluredir=allure-results || pytest --maxfail=1 --disable-warnings -q
+          python -m pytest tests/
